@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items:center;
+    flex-direction: column;
+}
+.robot-head{
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+    top: -8rem;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: left-right 1s alternate-reverse infinite; */
+    /* gap: 2rem; */
+}
+.head-move{
+    animation: left-right 1s alternate-reverse infinite;
+}
+.neck-move{
+    animation: left-shift 1s linear infinite;
+}
+@keyframes left-shift{
+    100%{
+        transform: skew(-15deg);
+    }
+}
+@keyframes left-right{
+    100%{
+        transform: translateX(2rem) translateY(-.1rem);
+    }
+}
+.robot-eye{
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border-radius: 56%;
+    position: absolute;
+}
+.left{
+    left: 2rem;
+    top: 1.5rem;
+}
+.right{
+    right: 2rem;
+    top: 1.5rem;
+}
+.robot-mouth{
+    position: absolute;
+    top: 5rem;
+    width: 3rem;
+    height: 1rem;
+    background: #fff;
+}
+
+/* ///////////////////////robot head complete ////////////////// */
+
+.robot-neck{
+    position: absolute;
+    width: 4rem;
+    top: 25.9rem;
+    height: 5rem;
+    background-color: gray;
+    /* animation: left-shift 1s linear infinite; */
+}
+.robot-body{
+    width: 15rem;
+    height: 15rem;
+    background: gray;
+    margin-top: -3rem;
+    position: relative;
+}
+.robot-left-hand{
+    position: absolute;
+    width: 10rem;
+    height: 2rem;
+    background: rgb(34, 114, 179);
+    left: -10rem;
+    
+}
+.robot-right-hand{
+    position: absolute;
+    width: 10rem;
+    height: 2rem;
+    background: red;
+    right: -10rem;
+}
+.robot-left-feet{
+    position: absolute;
+    width: 2rem;
+    height: 15rem;
+    background: red;
+    /* animation: crossleft .9s linear infinite; */
+    bottom: -15rem;
+}
+.robot-right-feet{
+    position: absolute;
+    width: 2rem;
+    right: 0;
+    height: 15rem;
+    background: rgb(34, 114, 179);
+    bottom: -15rem;
+    /* animation: crossright .9s linear infinite; */
+    transition: 1s;
+}
+.balle-balle{
+    animation: moveup 3s alternate-reverse infinite;
+}
+@keyframes moveup{
+    50%{
+        /* transform: translateY(-2rem); */
+        height: 10rem;
+        top: -10rem;
+        transform: skew(-7deg) translateX(.2rem);
+    }
+    100%{
+        height: 10rem;
+        top: -10rem;
+        transform: skew(7deg) translateX(-.2rem);
+
+    }
+}
+
+.right-cross{
+    animation: crossright 1s ease-in-out infinite;
+}
+@keyframes crossright{
+    0%{
+        transform: skew(0deg);
+    }
+    100%{
+        transform: skew(-25deg) translateX(-4rem);
+        background: red;
+    }
+}
+
+.left-cross{
+    animation: crossleft 2s linear infinite;
+}
+
+@keyframes crossleft{
+    0%{
+        transform: skew(0deg);
+    }
+    100%{
+        transform: skew(25deg) translateX(4rem);
+        background: rgb(34, 114, 179);
+    }
+}
+
+.robot-right-hand::before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 8rem;
+    right: 0;
+    animation: moveup .5s alternate-reverse infinite;
+    transition: 1s;
+    top: -8rem;
+    background: black;
+}
+
+.robot-left-hand::before{
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 8rem;
+    left: 0;
+    top: -8rem;
+    transition: 1s;
+    background: black;
+    animation: moveup .5s alternate-reverse infinite;
+}
+
+.btn{
+    /* position: absolute; */
+    /* top:4rem; */
+    padding: 1rem 2rem;
+    font-size:2rem;
+    background: #fff;
+    font-weight: 900;
+    outline: none;
+
+}
+.btn-controls{
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    position: absolute;
+    top: 4rem;
+    width: 100%;
+    gap: 2rem;
+    padding: 2rem;
+}

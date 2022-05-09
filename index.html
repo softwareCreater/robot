@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>robotDancer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+<audio src="robot.mp3" id="song"></audio>
+        <div class="btn-controls">
+        <button class=" btn btn1">PauseSong</button>
+        <button class="btn btn2">PlaySong</button>
+        </div>
+        <!-- robot head part  -->
+
+        <div class="robot-head">
+            <div class="robot-eye left"></div>
+            <div class="robot-eye right"></div>
+            <div class="robot-mouth"></div>
+        </div>
+
+        <!-- ********************robot neck ******************** -->
+        <div class="robot-neck"></div>
+        <!-- *****************************robot main body******************** -->
+
+        <div class="robot-body">
+            <div class="robot-left-hand"></div>
+            <div class="robot-right-hand"></div>
+            <div class="robot-left-feet"></div>
+            <div class="robot-right-feet"></div>
+        </div>
+    </div>
+    <script>
+        const song = document.querySelector('#song');
+        const robotHead = document.querySelector('.robot-head');
+        const robotNeck = document.querySelector('.robot-neck');
+        const robotLeftHand = document.querySelector('.robot-left-hand');
+        const robotRighttHand = document.querySelector('.robot-right-hand');
+        const robotLeftFeet = document.querySelector('.robot-left-feet');
+        const robotRightFeet = document.querySelector('.robot-right-feet');
+
+        const btn = document.querySelector('.btn');
+        const btn1 = document.querySelector('.btn1');
+        const btn2 = document.querySelector('.btn2');
+
+
+        btn2.addEventListener('click',()=>{
+            robotHead.classList.add('head-move');
+            robotNeck.classList.add('neck-move');
+            robotLeftFeet.classList.add('left-cross');
+            robotRightFeet.classList.add('right-cross');
+            robotLeftHand.classList.add('.balle-balle');
+            robotRighttHand.classList.add('.balle-balle');
+            song.play();
+        })
+
+        btn1.addEventListener('click',()=>{
+            robotHead.classList.remove('head-move');
+            robotNeck.classList.remove('neck-move');
+            robotLeftFeet.classList.remove('left-cross');
+            robotRightFeet.classList.remove('right-cross');
+            robotLeftHand.classList.remove('.balle-balle');
+            robotRighttHand.classList.remove('.balle-balle');
+            song.pause();
+            // alert('bajawa yaar')
+        })
+
+    </script>
+</body>
+</html>
