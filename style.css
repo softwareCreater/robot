@@ -74,7 +74,7 @@ html{
     width: 4rem;
     top: 25.9rem;
     height: 5rem;
-    background-color: gray;
+    background-color: red;
     /* animation: left-shift 1s linear infinite; */
 }
 .robot-body{
