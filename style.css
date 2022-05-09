@@ -29,7 +29,7 @@ html{
     /* gap: 2rem; */
 }
 .head-move{
-    animation: left-right 1s alternate-reverse infinite;
+    animation: left-right .6s alternate-reverse infinite;
 }
 .neck-move{
     animation: left-shift 1s linear infinite;
@@ -72,8 +72,8 @@ html{
 .robot-neck{
     position: absolute;
     width: 4rem;
-    top: 32.9rem;
-    height: 5rem;
+    top: 30.9rem;
+    height: 7rem;
     background-color: red;
     /* animation: left-shift 1s linear infinite; */
 }
